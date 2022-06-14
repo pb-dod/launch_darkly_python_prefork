@@ -119,13 +119,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-import ldclient
-from ldclient.config import Config as LDConfig
-
-LD_SDK_KEY = os.environ.get('LD_SDK_KEY')
-ldclient.set_config(LDConfig(LD_SDK_KEY))
-client = ldclient.get()
-
-show_feature = client.variation("ld-test-flag-2", {"key": "user@test.com"}, False)
-print(f'flag status: {show_feature}')
