@@ -127,5 +127,5 @@ LD_SDK_KEY = os.environ.get('LD_SDK_KEY')
 ldclient.set_config(LDConfig(LD_SDK_KEY))
 client = ldclient.get()
 
-show_feature = client.variation("your.flag.key", {"key": "user@test.com"}, False)
+show_feature = client.variation("ld-test-flag-2", {"key": "user@test.com"}, False)
 print(f'flag status: {show_feature}')
