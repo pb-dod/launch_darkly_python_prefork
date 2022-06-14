@@ -15,8 +15,10 @@ work](https://stackoverflow.com/a/12820303).
 1. Clone this repository and navigate to the directory.
 1. `./test_build.sh`
 
-## Usage
+## Issue Reproduction Steps
 
+1. Add a flag called `ld-test-flag-2` through the Launch Darkly web interface.
 1. `LD_SDK_KEY=<insert sdk key> ./test_run.sh`
-
-Visit: http://localhost:8000/
+1. Observe the flag status via log messages when the application starts. Example: "flag status: False"
+1. Toggle the `ld-test-flag-2` through the Launch Darkly web interface.
+1. Visit http://localhost:8000/ and notice that the flag status hasn't changed.
