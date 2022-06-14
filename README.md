@@ -13,10 +13,10 @@ work](https://stackoverflow.com/a/12820303).
 
 1. [Install Docker](https://docs.docker.com/get-docker/)
 1. Clone this repository and navigate to the directory.
-1. `LD_SDK_KEY=<insert sdk key> ./test_build.sh`
+1. `./test_build.sh`
 
 ## Usage
 
-1. `./test_run.sh`
+1. `LD_SDK_KEY=<insert sdk key> ./test_run.sh`
 
 Visit: http://localhost:8000/
