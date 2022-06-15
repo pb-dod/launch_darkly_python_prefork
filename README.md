@@ -1,8 +1,8 @@
 In this repository, I try to reproduce a bug that causes Launch Darkly to not
-relect the most recent state of feature flags when running with uwsgi + prefork.
+relect the most recent state of feature flags when running with gunicorn + prefork.
 
 The key to reproducing this issue is initializing the Launch Darkly client
-before the process is forked by uWSGI. In this example, we do this by adding
+before the process is forked by gunicorn. In this example, we do this by adding
 a feature flag check to the Django settings.
 
 The theory is that the pre-fork Launch Darkly client will spawn a thread for

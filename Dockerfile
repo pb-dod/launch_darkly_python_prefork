@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir -r /tmp/requirements.txt
 COPY . /code
 WORKDIR /code
 
-CMD ["uwsgi", "--ini", "/code/uwsgi.ini"]
+CMD ["gunicorn", "-c", "/code/gunicorn.conf.py", "mysite.wsgi:application"]
